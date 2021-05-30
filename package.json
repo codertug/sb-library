@@ -1,25 +1,20 @@
 {
-  "name": "intro-storybook-react-template",
+  "name": "sb-library",
   "version": "0.1.0",
-  "description": "Starter template to get up and running quickly with React and Storybook",
-  "author": "Chromatic <https://chromatic.com/>",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/chromaui/intro-storybook-react-template"
-  },
-  "bugs": {
-    "url": "https://github.com/chromaui/intro-storybook-react-template/issues"
-  },
-  "license": "MIT",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-scripts": "4.0.1",
-    "web-vitals": "^0.2.4"
+    "@types/jest": "^26.0.23",
+    "@types/node": "^12.20.13",
+    "@types/react": "^17.0.8",
+    "@types/react-dom": "^17.0.5",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "typescript": "^4.3.2",
+    "web-vitals": "^1.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -33,6 +28,16 @@
     "extends": [
       "react-app",
       "react-app/jest"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
     ]
   },
   "browserslist": {
@@ -48,12 +53,13 @@
     ]
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^6.2.8",
-    "@storybook/addon-essentials": "^6.2.8",
-    "@storybook/addon-links": "^6.2.8",
-    "@storybook/node-logger": "^6.2.8",
+    "@storybook/addon-actions": "^6.2.9",
+    "@storybook/addon-essentials": "^6.2.9",
+    "@storybook/addon-links": "^6.2.9",
+    "@storybook/addons": "^6.2.9",
+    "@storybook/node-logger": "^6.2.9",
     "@storybook/preset-create-react-app": "^3.1.7",
-    "@storybook/react": "^6.2.8",
-    "@storybook/testing-react": "^0.0.10"
+    "@storybook/react": "^6.2.9",
+    "@storybook/theming": "^6.2.9"
   }
 }
